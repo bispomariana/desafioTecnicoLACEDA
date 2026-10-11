@@ -1,0 +1,4 @@
+data/*.csv
+data/base_busca_final.csv/
+__pycache__/
+.venv/
