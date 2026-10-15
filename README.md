@@ -24,11 +24,17 @@ git clone https://github.com/bispomariana/desafioTecnicoLACEDA.git
 python -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+```
 
-# coloque as bases (separador ";") em data/:
-#   data/base_CNEFE_BA.csv
-#   data/base_busca.csv
+Faça download da base de dados do CNEFE no link
 
+https://fiocruzbr-my.sharepoint.com/personal/robespierre_pita_fiocruz_br/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Frobespierre%5Fpita%5Ffiocruz%5Fbr%2FDocuments%2FReLinKE%5FDOCS%2FSele%C3%A7%C3%A3o%202026%2F29%5FBA%2Ezip&parent=%2Fpersonal%2Frobespierre%5Fpita%5Ffiocruz%5Fbr%2FDocuments%2FReLinKE%5FDOCS%2FSele%C3%A7%C3%A3o%202026&ga=1
+
+Extraia o arquivo, renomeie para "base_CNEFE_BA" e adicione na pasta `data`.
+
+No diretório do projeto, execute:
+
+```bash
 python main.py
 ```
 
@@ -41,7 +47,7 @@ Saída: `data/base_busca_final.csv/`, com todas as colunas da base de busca mais
 ├── main.py
 ├── requirements.txt
 ├── README.md
-└── data/        # bases de entrada e saída (não versionadas)
+└── data/        # bases de entrada e saída
 ```
 
 ## Premissas
