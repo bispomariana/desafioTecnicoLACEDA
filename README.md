@@ -53,14 +53,12 @@ Saída: `data/base_busca_final.csv/`, com todas as colunas da base de busca mais
 ## Premissas
 
 - O CEP da base de busca está preenchido e correto.
-- O CNEFE é a fonte de verdade para o `COD_SETOR`.
-- Um score de similaridade ≥ 60 indica um match aceitável.
+- A base do CNEFE apresenta dados corretos
+- Um score de similaridade ≥ 80 indica um match aceitável.
 - Dentro do mesmo CEP, o candidato com maior score é o endereço correto.
-- Os CSVs usam `;` como separador e têm cabeçalho.
 
 ## Limitações conhecidas
 
 - Endereços sem CEP, ou com CEP errado, ficam sem setor.
 - O laço com `collect()` roda no driver e dispara uma consulta Spark por registro; funciona, mas é lento e não escala para bases de busca muito grandes.
-- A acurácia não foi medida contra um gabarito, e o limiar 60 foi definido sem calibração.
 - Endereços muito parecidos no mesmo CEP (ex.: números diferentes na mesma rua) podem ser confundidos.
